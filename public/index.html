@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <link rel="stylesheet" href="./assets/all.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css"/>
+    <link rel="stylesheet" href="./assets/bootstrap.min.css" />
+    <link rel="stylesheet" href="./assets/mdb.css"/>
+    <link rel="stylesheet" href="./assets/r-style.css" />
+
+    <title>React App</title>
+    <style>
+      html,
+      body,
+      header,
+      .intro-2 {
+        height: 100%;
+      }
+  
+      @media (max-width: 740px) {
+  
+        html,
+        body,
+        header,
+        .intro-2 {
+          height: 900px;
+        }
+      }
+  
+      @media (min-width: 800px) and (max-width: 850px) {
+  
+        html,
+        body,
+        header,
+        .intro-2 {
+          height: 900px;
+        }
+      }
+  
+    </style>
+  </head>
+  <body class="creative-lp" cz-shortcut-listen="true">
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <!-- script here -->
+    <script src="./assets/jquery-3.4.0.min.js"></script>
+    <script src="./assets/popper.min.js"></script>
+    <script src="./assets/bootstrap.min.js"></script>
+    <script src="./assets/mdb.js"></script>
+    <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script> -->
+    <script src="./assets/r-script.js"></script>
+     <!-- Custom scripts -->
+  <script>
+    // Animation init
+    new WOW().init();
+
+    // Gallery
+    $(function () {
+      var selectedClass = "";
+      $(".filter").click(function () {
+        selectedClass = $(this).attr("data-rel");
+        $("#gallery").fadeTo(100, 0.1);
+        $("#gallery div").not("." + selectedClass).fadeOut().removeClass('animation');
+        setTimeout(function () {
+          $("." + selectedClass).fadeIn().addClass('animation');
+          $("#gallery").fadeTo(300, 1);
+        }, 300);
+      });
+    });
+
+  </script>
+  </body>
+</html>

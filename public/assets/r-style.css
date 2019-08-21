@@ -1,0 +1,147 @@
+/* home style */
+div{
+  opacity: 0;
+  transition: 0.11s ease-out;
+}
+
+.load{
+  opacity: 1;
+  animation: load 0.5s ease-in;
+}
+
+.home img{
+  filter: drop-shadow(10px 5px 10px rgba(250,0,0,.5));
+}
+
+@keyframes load {
+  0%{
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  100%{
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+.intro-2.home{
+    height: 110vh;
+    background-size: contain;
+    background-position: bottom;
+    background-repeat: no-repeat;
+}
+
+#navbarTogglerDemo02{
+    max-height: 55px;
+}
+
+#services .card-body:hover {
+  border-radius: 0 20%!important;
+}
+
+
+/* brand svg style */
+.navbar-brand svg {
+    width: 80px;
+    height: 57px;
+}
+.navbar-brand svg text{
+    font-size: 23rem;
+    font-weight: 900;
+    stroke-width: 25px;
+}
+
+.navbar-brand svg .text {
+  fill: none;
+  stroke-width: 3;
+  stroke-linejoin: round;
+  stroke-dasharray: 100 330;
+  stroke-dashoffset: 0;
+  -webkit-animation: stroke 6s infinite linear;
+  animation: stroke 6s infinite linear;
+}
+.navbar-brand svg .text:nth-child(5n + 1) {
+  stroke: #F2385A;
+  -webkit-animation-delay: -1.2s;
+  animation-delay: -1.2s;
+}
+.navbar-brand svg .text:nth-child(5n + 2) {
+  stroke: #F5A503;
+  -webkit-animation-delay: -2.4s;
+  animation-delay: -2.4s;
+}
+.navbar-brand svg .text:nth-child(5n + 3) {
+  stroke: #E9F1DF;
+  -webkit-animation-delay: -3.6s;
+  animation-delay: -3.6s;
+}
+.navbar-brand svg .text:nth-child(5n + 4) {
+  stroke: #56D9CD;
+  -webkit-animation-delay: -4.8s;
+  animation-delay: -4.8s;
+} 
+ .navbar-brand svg .text:nth-child(5n + 5) {
+  stroke: #3AA1BF;
+  -webkit-animation-delay: -6s;
+  animation-delay: -6s;
+}
+
+@keyframes stroke {
+  100% {
+    stroke-dashoffset: -400;
+  }
+}
+
+
+/* navbar svg style */
+
+.navbar-nav svg{
+    max-width: 80px;
+    max-height: 20px;
+}
+
+.navbar-nav text.menu-text{
+    font-size: 1rem;
+    fill: #fff;
+    stroke-width: 0px;
+    stroke: #fff;
+    stroke-linejoin: round;
+    stroke-dasharray: 100 0;
+    stroke-dashoffset: 0;
+}
+
+.navbar-nav text.menu-text:hover{
+    transition: all 0.11s linear;
+    fill: none;
+    stroke-width: 1px;
+    animation: dashAnim 1s linear;
+    animation-delay: 0.11s;
+    animation-fill-mode: forwards;
+
+}
+@keyframes dashAnim{
+    0%{
+        stroke-dasharray: 10 10;
+        stroke-dashoffset: 0;
+    }
+    98%{
+        stroke-dasharray: 100 0;
+        stroke-dashoffset: 0;
+    }
+    100%{
+        stroke-dasharray: 100 0;
+        stroke-dashoffset: 0;
+        fill: #fff;
+    stroke-width: 0px;
+    }
+}
+
+/* banner style */
+.halfBanner{
+    margin-top: 140px!important;
+}
+
+/* gallery */
+
+#gallery{
+    column-count: 3;
+}
